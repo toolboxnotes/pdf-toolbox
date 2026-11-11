@@ -1,0 +1,24 @@
+{
+  "name": "pdf-toolbox",
+  "version": "2.5.1",
+  "private": true,
+  "type": "module",
+  "description": "Offline PDF toolbox in a single HTML file (English, Korean, Chinese)",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "@tesseract.js-data/chi_sim": "1.0.0",
+    "@tesseract.js-data/eng": "1.0.0",
+    "@tesseract.js-data/kor": "1.0.0",
+    "diff": "4.0.4",
+    "docx": "9.8.1",
+    "esbuild": "0.28.2",
+    "jszip": "3.10.1",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "6.2.108",
+    "pptxgenjs": "4.0.1",
+    "tesseract.js": "7.0.0",
+    "tesseract.js-core": "7.0.0"
+  }
+}
