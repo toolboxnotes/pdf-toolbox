@@ -82,10 +82,9 @@ The build inlines everything in `src/` together with all third-party libraries, 
 
 - `PDF-Toolbox.html`: the app
 - `PDF-Toolbox-Mac.zip`: the Mac app bundle
-- `PDF Toolbox.exe`: the Windows launcher (copied from `launcher/windows/`)
 - `THIRD-PARTY-LICENSES.txt`
 
-To rebuild the Windows launcher, run `launcher/windows/build-windows.sh` (needs zig: `pip install ziglang`).
+The Windows launcher is built separately: run `launcher/windows/build-windows.sh` (needs zig: `pip install ziglang`). It creates `launcher/windows/PDF Toolbox.exe`, which the next `npm run build` copies to `dist/`.
 
 ### Project structure
 
