@@ -322,6 +322,8 @@ const I18N = {
   '下载完整许可证文本': ['Download full license texts', '전체 라이선스 전문 다운로드'],
   '显示完整许可证文本': ['Show full license texts', '전체 라이선스 전문 보기'],
   // v2.5
+  '按文件名排序': ['Sort by file name', '파일 이름순 정렬'],
+  '也可以拖动或用箭头调整顺序': ['You can also drag or use the arrows to reorder', '드래그하거나 화살표로 순서를 바꿀 수도 있습니다'],
   'PDF 转 Office': ['PDF to Office', 'PDF → Office'],
   '把 PDF 转成可以编辑的 Word、PowerPoint 或 Excel 文件。扫描件会自动识别文字（OCR）。': ['Convert a PDF into an editable Word, PowerPoint or Excel file. Scanned pages are recognized automatically (OCR).', 'PDF를 편집 가능한 Word, PowerPoint, Excel 파일로 변환합니다. 스캔 페이지는 자동으로 문자를 인식합니다 (OCR).'],
   '转换成': ['Convert to', '변환 형식'],

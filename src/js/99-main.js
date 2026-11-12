@@ -1,5 +1,5 @@
 // ================= Home, navigation and routing =================
-const APP_VERSION = '2.5.1';
+const APP_VERSION = '2.5.2';
 
 // ---------- Icons (24×24 line icons, drawn by hand) ----------
 const GROUP_COLOR = { [T('整理')]: '#e5603f', [T('优化')]: '#1f9d6b', [T('转换')]: '#2f6fde', [T('编辑')]: '#8a4fd8', [T('安全')]: '#3d4a5c' };

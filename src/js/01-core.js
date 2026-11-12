@@ -348,7 +348,7 @@ function thumbImg(c) {
   k.style.width = c.width / (window.devicePixelRatio || 1) + 'px';
   return k;
 }
-function filePicker({ accept = '.pdf,application/pdf', multiple = false, label, hint, onChange, sortable = multiple, preview = 'auto' } = {}) {
+function filePicker({ accept = '.pdf,application/pdf', multiple = false, label, hint, onChange, sortable = multiple, preview = 'auto', sortByName = false } = {}) {
   let files = [];
   const input = h('input', { type: 'file', accept, multiple, hidden: true });
   const list = h('ul', { class: 'files' });
@@ -426,7 +426,18 @@ function filePicker({ accept = '.pdf,application/pdf', multiple = false, label, 
         ...(r.n > MAX ? [h('div', { class: 'pmore' }, T('还有 {0} 页', r.n - MAX))] : []));
     }).catch(e => strip.replaceChildren(h('div', { class: 'warn' }, friendlyError(e))));
   };
-  const wrap = h('div', { class: 'picker' }, drop, input, list, strip);
+  // Sort by file name (natural order: 2 comes before 10)
+  const byName = (a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
+  const sortBar = sortByName ? h('div', { class: 'sort-bar', hidden: true },
+    h('span', {}, T('按文件名排序')),
+    h('button', { class: 'btn small', onclick: () => { files.sort(byName); render(); onChange && onChange(files); } }, 'A → Z'),
+    h('button', { class: 'btn small', onclick: () => { files.sort((a, b) => byName(b, a)); render(); onChange && onChange(files); } }, 'Z → A'),
+    h('span', { class: 'note' }, T('也可以拖动或用箭头调整顺序'))) : null;
+  if (sortBar) {
+    const _r2 = render;
+    render = function () { _r2(); sortBar.hidden = files.length < 2; };
+  }
+  const wrap = h('div', { class: 'picker' }, drop, input, sortBar, list, strip);
   const api = { el: wrap, get files() { return files; }, set(fs) { files = fs; render(); } };
   wrap.__api = api;
   return api;

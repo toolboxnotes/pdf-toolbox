@@ -102,7 +102,7 @@ const PAPER = { a4: [595.28, 841.89], letter: [612, 792], a3: [841.89, 1190.55] 
 registerTool({
   id: 'img2pdf', group: T('转换'), name: T('图片转 PDF'), desc: T('把多张图片按顺序合成一个 PDF，每张图片一页。'),
   render(view) {
-    const fp = filePicker({ multiple: true, accept: 'image/*,.jpg,.jpeg,.png,.webp,.gif,.bmp', label: T('点击选择或拖入图片（可多选）') });
+    const fp = filePicker({ multiple: true, sortByName: true, accept: 'image/*,.jpg,.jpeg,.png,.webp,.gif,.bmp', label: T('点击选择或拖入图片（可多选）') });
     const size = optSelect(T('页面大小'), [['fit', T('和图片一样大')], ['a4', 'A4'], ['letter', 'Letter'], ['a3', 'A3']], 'a4');
     const orient = optSelect(T('页面方向'), [['auto', T('自动（跟随图片）')], ['p', T('纵向')], ['l', T('横向')]], 'auto');
     const margin = optSelect(T('页边距'), [['0', T('无')], ['20', T('小')], ['40', T('大')]], '20');

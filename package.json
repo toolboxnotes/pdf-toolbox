@@ -1,6 +1,6 @@
 {
   "name": "pdf-toolbox",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "private": true,
   "type": "module",
   "description": "Offline PDF toolbox in a single HTML file (English, Korean, Chinese)",
