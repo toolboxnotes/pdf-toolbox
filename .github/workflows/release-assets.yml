@@ -1,0 +1,54 @@
+# Every release gets two copies of each download:
+#   versioned name (e.g. App-Windows-v1.2.3.zip)  -> for that exact version
+#   fixed name     (e.g. App-Windows.zip)         -> always the newest via
+#   https://github.com/${{ github.repository }}/releases/latest/download/<fixed name>
+# so blog posts and READMEs never need a new link after a release.
+# Runs when a release is published; re-run for an old release with "Run workflow" + tag.
+name: Release assets
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.2.3)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name || inputs.tag }}
+
+      - name: Upload fixed-name copies
+        run: |
+          set -euo pipefail
+          ver="${TAG#v}"
+          esc="${ver//./\\.}"
+          mkdir -p dl out
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -D dl --clobber || true
+          shopt -s nullglob
+          for f in dl/*; do
+            name="$(basename "$f")"
+            # strip "-v1.2.3", "_v1.2.3" or "_v1.2.3_2026-01-31" from the name
+            fixed="$(printf '%s' "$name" | sed -E "s/[-_]v?${esc}([-_][0-9]{4}-[0-9]{2}-[0-9]{2})?([-_.])/\\2/")"
+            if [ "$fixed" != "$name" ]; then
+              cp "$f" "out/$fixed"
+              echo "$name -> $fixed"
+            fi
+          done
+          files=(out/*)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "::warning::No versioned assets found on $TAG"
+            exit 0
+          fi
+          gh release upload "$TAG" "${files[@]}" -R "$GITHUB_REPOSITORY" --clobber

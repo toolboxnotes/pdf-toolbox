@@ -18,11 +18,13 @@ Online PDF converters are convenient, but they ask you to upload contracts, quot
 
 Go to [Releases](https://github.com/toolboxnotes/pdf-toolbox/releases/latest) and download the file for your computer.
 
+The links below always give the newest version. Each release also keeps version-named copies (`PDF-Toolbox-Windows-v2.5.2.zip` etc.) if you need a specific version.
+
 | Platform | File | How to open |
 |---|---|---|
-| Windows | `PDF-Toolbox-Windows-<version>.zip` | Unzip it and double-click **`PDF Toolbox.exe`**. It opens in its own window using Google Chrome (or Microsoft Edge if Chrome isn't installed), with no address bar or tabs. Keep `PDF Toolbox.exe` and `PDF-Toolbox.html` in the same folder. |
-| Mac | `PDF-Toolbox-Mac-<version>.zip` | Unzip it and move **`PDF Toolbox.app`** to Applications. It opens with Chrome, Edge or Brave if installed, otherwise Safari. |
-| Anything else | `PDF-Toolbox-<version>.html` | Open the file in Chrome or Edge. |
+| Windows | [`PDF-Toolbox-Windows.zip`](https://github.com/toolboxnotes/pdf-toolbox/releases/latest/download/PDF-Toolbox-Windows.zip) | Unzip it and double-click **`PDF Toolbox.exe`**. It opens in its own window using Google Chrome (or Microsoft Edge if Chrome isn't installed), with no address bar or tabs. Keep `PDF Toolbox.exe` and `PDF-Toolbox.html` in the same folder. |
+| Mac | [`PDF-Toolbox-Mac.zip`](https://github.com/toolboxnotes/pdf-toolbox/releases/latest/download/PDF-Toolbox-Mac.zip) | Unzip it and move **`PDF Toolbox.app`** to Applications. It opens with Chrome, Edge or Brave if installed, otherwise Safari. |
+| Anything else | [`PDF-Toolbox.html`](https://github.com/toolboxnotes/pdf-toolbox/releases/latest/download/PDF-Toolbox.html) | Open the file in Chrome or Edge. |
 
 ### First launch warnings
 
