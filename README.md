@@ -106,6 +106,21 @@ The Windows launcher is built separately: run `launcher/windows/build-windows.sh
 | `src/js/99-main.js` | Home screen, routing, About / open-source licenses page |
 | `launcher/windows/`, `launcher/mac/` | Desktop launchers |
 
+## Guides
+
+Step-by-step guides for each tool on the Toolbox Notes blog:
+
+| Task | English | 한국어 |
+|---|---|---|
+| Merge, split and extract pages | [Guide](https://toolboxnotes.com/en/posts/merge-split-pdf-offline/) | [PDF 합치기·나누기·페이지 추출](https://toolboxnotes.com/ko/posts/merge-split-pdf-offline/) |
+| Compress a PDF for email | [Guide](https://toolboxnotes.com/en/posts/compress-pdf-offline/) | [PDF 용량 줄이기](https://toolboxnotes.com/ko/posts/compress-pdf-offline/) |
+| PDF to JPG and JPG to PDF | [Guide](https://toolboxnotes.com/en/posts/pdf-to-jpg-and-jpg-to-pdf/) | [PDF ↔ JPG 변환](https://toolboxnotes.com/ko/posts/pdf-to-jpg-and-jpg-to-pdf/) |
+| PDF to Excel and Excel to PDF | [Guide](https://toolboxnotes.com/en/posts/pdf-excel-convert-offline/) | [PDF ↔ 엑셀 변환](https://toolboxnotes.com/ko/posts/pdf-excel-convert-offline/) |
+| Password protect or unlock a PDF | [Guide](https://toolboxnotes.com/en/posts/pdf-password-protect-unlock/) | [PDF 비밀번호 설정·해제](https://toolboxnotes.com/ko/posts/pdf-password-protect-unlock/) |
+| Redact a PDF permanently | [Guide](https://toolboxnotes.com/en/posts/redact-pdf-permanently/) | [PDF 개인정보 가리기](https://toolboxnotes.com/ko/posts/redact-pdf-permanently/) |
+| Make a scanned PDF searchable (OCR) | [Guide](https://toolboxnotes.com/en/posts/scanned-pdf-searchable-ocr/) | [스캔 PDF 검색 가능하게 (OCR)](https://toolboxnotes.com/ko/posts/scanned-pdf-searchable-ocr/) |
+| Sign a PDF without printing | [Guide](https://toolboxnotes.com/en/posts/sign-pdf-offline/) | [PDF 서명 넣기](https://toolboxnotes.com/ko/posts/sign-pdf-offline/) |
+
 ## Feedback
 
 Found a bug or want a feature? [Open an issue](https://github.com/toolboxnotes/pdf-toolbox/issues) or email [toolbox@toolboxnotes.com](mailto:toolbox@toolboxnotes.com). More tools and notes at [toolboxnotes.com](https://toolboxnotes.com/).
